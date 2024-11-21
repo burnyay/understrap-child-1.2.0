@@ -1,0 +1,46 @@
+@import "theme/child_theme_variables";                   // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import "assets/bootstrap5/bootstrap";                             // <------- Loads Bootstrap4
+@import "assets/understrap/theme/understrap";  // <------- Loads the Understrap defaults. Just a few classes to incorporate BS in WP
+@import "assets/understrap/theme/woocommerce"; // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+
+// Optional files - If you don´t use the corresponding scripts/fonts comment em out
+@import "assets/fontawesome/font-awesome";                           // <------- Font Awesome Icon font
+@import "assets/underscores";                            // <------- Underscores media styles
+
+// Any additional imported files //
+@import "theme/child_theme";  
+@import "theme/typography";                             // <------- Add your styles into this file
+@import "assets/understrap/theme/colors";           // <-------- This creates the necessary bootstrap color classes.
+@import "assets/understrap/theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
+@import "assets/understrap/theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+
+/*==================================
+  # Lightspeed Stylesheets
+===================================*/
+ 
+
+@import "theme/base/base_buttons";
+@import "theme/base/base_card";
+@import "theme/base/base_column_layout";
+@import "theme/base/base_forms";
+@import "theme/base/base_header";
+@import "theme/base/base_post_loop";
+@import "theme/base/base_team_loop";
+@import "theme/base/base_body";
+@import "theme/base/base_footer";
+@import "theme/base/helpers"; 
+
+@import "theme/components/buttons";
+@import "theme/components/card";
+@import "theme/components/column_layout";
+@import "theme/components/forms";
+@import "theme/components/post_loop";
+@import "theme/components/team_loop";
+
+@import "theme/layout/body"; 
+@import "theme/layout/footer"; 
+@import "theme/layout/header";
+
+@import "theme/pages/team_single";
+@import "theme/pages/post_single"; 
+@import "theme/pages/home"; 

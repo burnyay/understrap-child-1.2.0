@@ -1,0 +1,106 @@
+<div class="spell-summary">
+  <div class="spell-summary__content accordion">
+    <div class="spell-summary__title">
+	    <div class="spell-info">
+	    	<div class="column spell-name"><?php the_title(); ?></div>
+	    	<div class="column spell-level">
+	    		<?php 
+				$level = get_field('level');
+	    		foreach( $level as $levels ): ?>
+				<?php echo esc_html( $levels->name ); ?>
+				<?php endforeach; ?>
+			</div> 
+			<div class="column casting-time">
+	    		<?php the_field('casting_time'); ?>
+			</div>
+			<div class="column range">
+	    		<?php the_field('range'); ?>
+			</div>
+			<div class="column duration">
+	    		<?php the_field('duration') ?>
+			</div>
+			<div class="column school">
+	    	<?php 
+			//School
+			$school = get_field('school');
+			if( $school ): ?>
+			    <?php foreach( $school as $schools ): ?>
+			        <?php echo esc_html( $schools->name ); ?>
+			    <?php endforeach; ?>
+			<?php endif; ?>
+			</div>
+    	</div>
+	</div>	
+    <div class="spell-meta">
+			<div class="casting-time">
+				<h3>Casting Time</h3>
+	    		<?php the_field('casting_time'); ?>
+			</div>
+			<div class="range">
+				<h3>Range</h3>
+	    		<?php the_field('range'); ?>
+			</div>
+			<div class="duration">
+				<h3>Duration</h3>
+	    		<?php the_field('duration') ?>
+			</div>
+			<div class="school">
+				<h3>School</h3>
+	    	<?php 
+			//School
+			$school = get_field('school');
+			if( $school ): ?>
+			    <?php foreach( $school as $schools ): ?>
+			        <?php echo esc_html( $schools->name ); ?>
+			    <?php endforeach; ?>
+			<?php endif; ?>
+			</div>
+
+		<div class="class">
+    	<?php 
+			//class
+			$class = get_field('class');
+			if( $class ): ?>
+		    	<h3>Class</h3>
+			    <ul>
+			    <?php foreach( $class as $classes ): ?>
+			        <li><a href="<?php echo esc_url( get_term_link( $classes ) ); ?>"><?php echo esc_html( $classes->name ); ?></a></li>
+			    <?php endforeach; ?>
+			    </ul>
+			<?php endif; ?>
+		</div>
+		
+		<div class="components">
+			<?php 
+			//components
+			$components = get_field('components');
+			if( $components ): ?>
+		    	<h3>Components</h3>
+			    <ul>
+			    <?php foreach( $components as $component ): ?>
+			        <li><?php echo esc_html( $component->name ); ?></li>
+			    <?php endforeach; ?>
+			    </ul>
+			<?php endif; ?>
+		</div>
+
+    	<div class="material-used">
+			<?php
+			$materials_used = get_field('materials_used');
+			if( $materials_used ): ?>
+		    	<h3>Materials Required</h3>
+			    <?php the_field('materials_used'); ?>
+			<?php endif; ?>
+		</div>
+
+
+		<div class="spell-description">
+			<h3>Spell Description</h3>
+			<?php the_content(); ?>	 
+		<a href="<?php the_permalink(); ?>" class="nu gray">View Spell Page ></a>
+		</div>
+
+        
+    </div>
+  </div>
+</div>

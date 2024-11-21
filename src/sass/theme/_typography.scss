@@ -1,0 +1,12 @@
+/*==================================
+  # Typography
+===================================*/
+
+@font-face {
+    font-family: 'Font Family';
+    src: url('/wp-content/themes/lightspeed-child/fonts/font-file-name.woff2') format('woff2'),
+        url('/wp-content/themes/lightspeed-child/fonts/font-file-name.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

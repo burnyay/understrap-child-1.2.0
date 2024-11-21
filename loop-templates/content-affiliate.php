@@ -1,0 +1,1 @@
+<div class="affiliate">Arcane Eye may earn a small commission from affiliate links in this article. <a href="/privacy-policy/">Learn more.</a></div>

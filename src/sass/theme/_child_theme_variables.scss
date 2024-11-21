@@ -1,0 +1,64 @@
+/**
+ *  Child theme styling
+ *
+ * Use this file to overwrite the basic Bootstrap variables and add your own variables
+ * To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+ * Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+ * As example you find one of the most important Bootstrap variable below: $brand-primary.
+ * Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+ * Just add your color code here, compile the theme.scss file to change this color everywhere
+ */
+
+/*==================================
+  # Color System 
+===================================*/
+$primary: #58180d;
+$black: #000000;
+$white: #FFFFFF;
+
+/*==================================
+  # Fonts, line-height, and color for body text, headings, and more.
+===================================*/
+$enable-responsive-font-sizes: true;
+$font-size-base: 1.25rem;
+
+$font-family-sans-serif: 'nunito',
+-apple-system,
+system-ui,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif !default;
+
+
+$font-family-header: 'itc-avant-garde-gothic-pro',
+-apple-system,
+system-ui,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif !default;
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-family-header;
+}
+
+$font-family-base: $font-family-sans-serif;
+
+$body-color: #000;
+
+/*==================================
+  # Page Setup
+===================================*/
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1400px
+) !default;
+
+$headerheight: 64px;

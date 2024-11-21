@@ -1,0 +1,119 @@
+/*==================================
+ #Base Styles
+===================================*/
+
+.wrapper {
+  position: relative;
+}
+
+/*==================================
+ #Columnn Backgrounds
+===================================*/
+
+.no-overlay .background:after {
+  display: none !important;
+}
+
+.image.contain {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*==================================
+ #Alternating Section
+===================================*/
+
+@include media-breakpoint-up(md) {
+    .alternating-section .content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  
+  @include media-breakpoint-down(sm) {
+    .alternating-section .content {
+      margin-top: 2rem;
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    .alternating-section.image-left .image {
+      order: 0;
+    }
+  
+    .alternating-section.image-left .content {
+      order: 1;
+    }
+  
+    .alternating-section.image-right .image {
+      order: 1;
+    }
+  
+    .alternating-section.image-right .content {
+      order: 0;
+    }
+  }
+  
+  @include media-breakpoint-down(sm) {
+  
+    .alternating-section .image {
+      order: 0;
+      height: 300px;
+    }
+  
+    .alternating-section .content {
+      order: 1;
+    }
+  }
+  
+  .alternating-section .image {
+    background-size: cover;
+    background-position: 50%;
+  }
+  
+  @include media-breakpoint-up(md) {
+    .alternating-section .image {
+      min-height: 0;
+      max-height: 100%;
+    }
+  }
+  
+/*==================================
+#Background Image Section
+===================================*/
+  
+  .background-image-section .column-content {
+    color: #fff;
+    z-index: 101;
+    position: relative;
+  }
+  
+  .background-image-section .background:after {
+    content: "";
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 99;
+    top: 0;
+    left: 0;
+  }
+  
+  .background-image-section .background {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
